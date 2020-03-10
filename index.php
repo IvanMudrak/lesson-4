@@ -13,7 +13,7 @@
 
 
 <form method="POST">
-    <input type="" name="a"/>
+    <input type=""  name="a"/>
     <input type="" name="b"/>
     <button type="submit">send </button>
 </form>
@@ -25,29 +25,36 @@ $a = $_POST['a'];
 $b = $_POST['b'];
 $z = 0;
 
-$max1 = 0;
-if($a > $b*2){
-    $max1 = $a;
-}else{
-    $max1 = $b;
-}
+if ($a == 0 or $a == null or $b == 0 or $b == null) {
+    echo 'Введите числовые значения кроме нуля!';
+} else {
 
-$max2 = 0;
-if(($a*2)-$b > $b){
-    $max2 = $a;
-}else{
-    $max2 = $b;
-}
 
-$z = $max1 * $max2;
-echo 'Значение z = '.$z.'<br/>';
+    $max1 = 0;
+    if ($a > $b * 2) {
+        $max1 = $a;
+    } else {
+        $max1 = $b;
+    }
+
+    $max2 = 0;
+    if (($a * 2) - $b > $b) {
+        $max2 = $a;
+    } else {
+        $max2 = $b;
+    }
+
+    $z = $max1 * $max2;
+    echo 'Значение z = ' . $z . '<br/>';
 //-------------------------------------
 
-function z($x,$y){
-    return  $x > $y?$x:$y;
-}
+    function z($x, $y)
+    {
+        return $x > $y ? $x : $y;
+    }
 
-echo 'Значение z в функции  = '.z($a,2*$b)*z($a*2-$b,$b).'<br/>';
+    echo 'Значение z в функции  = ' . z($a, 2 * $b) * z($a * 2 - $b, $b) . '<br/>';
+}
 ?>
 
 
