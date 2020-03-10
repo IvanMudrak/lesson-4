@@ -10,20 +10,19 @@
     1) не используя функцию max;<br/>
     2) определив и использовав функцию max.<br/></h3>
 
+
+
 <form method="POST">
-    <input type="" name="number"/>
-    <button type="submit">Принять значение "а" </button>
-</form>
-<form method="POST">
-    <input type="" name="number"/>
-    <button type="submit">Принять значение "б"</button>
+    <input type="" name="a"/>
+    <input type="" name="b"/>
+    <button type="submit">send </button>
 </form>
 
 <?php
 
 
-$a = $_POST['number'];
-$b = $_POST['number'];
+$a = $_POST['a'];
+$b = $_POST['b'];
 $z = 0;
 
 $max1 = 0;
